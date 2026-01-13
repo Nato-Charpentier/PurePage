@@ -37,7 +37,6 @@ Route::post('/api/bookings', function (Illuminate\Http\Request $request) {
 #artisan
 Route::get('/mockups/artisan', fn () => view('templates.artisan.index') )->name('mock.artisan');
 
-
 #LEAD FORM SUBMISSION
 Route::middleware(['throttle:10,1'])->group(function () {
     Route::post('/lead', [LeadController::class, 'store'])->name('lead.store');

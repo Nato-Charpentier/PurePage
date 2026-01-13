@@ -13,6 +13,9 @@
     {{-- CALENDAR --}}
     @include('templates.coach.sections.calendar')
 
+    {{-- ABOUT --}}
+    @include('templates.coach.sections.about')
+
     {{-- SERVICES --}}
     @include('templates.coach.sections.services')
 

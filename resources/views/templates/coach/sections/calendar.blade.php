@@ -230,11 +230,13 @@ document.addEventListener('DOMContentLoaded', function() {
         console.log('Réservation:', bookingData);
 
         // Ici tu peux envoyer à ton serveur Laravel
-        // fetch('/api/bookings', {
-        //     method: 'POST',
-        //     headers: { 'Content-Type': 'application/json', 'X-CSRF-TOKEN': '{{ csrf_token() }}' },
-        //     body: JSON.stringify(bookingData)
-        // });
+        fetch('/api/bookings', {
+             method: 'POST',
+             headers: { 'Content-Type': 'application/json', 'X-CSRF-TOKEN': '{{ csrf_token() }}' },
+             body: JSON.stringify(bookingData)
+        }).then(response => response.json()).then(data => {
+            console.log('Succès:', data);
+        });
 
         // Pour le mockup
         successMsg.classList.remove('hidden');
