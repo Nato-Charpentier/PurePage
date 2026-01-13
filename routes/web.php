@@ -27,7 +27,8 @@ Route::prefix('coach/legal')->group(function () {
 Route::post('/api/bookings', function (Illuminate\Http\Request $request) {
     // Envoyer un email au coach
     Mail::send('emails.booking-confirmation', $request->all(), function ($mail) {
-        $mail->to('coach@example.com');
+        $mail->to('purepage.pf@gmail.com')
+             ->subject('Nouvelle réservation de coaching');
     });
     
     return response()->json(['success' => true]);
