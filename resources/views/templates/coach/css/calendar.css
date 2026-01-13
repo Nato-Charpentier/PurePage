@@ -1,0 +1,24 @@
+/* Calendar Component Styles */
+
+input[type="date"] {
+    color-scheme: dark;
+}
+
+.slot {
+    padding: 10px;
+    border-radius: 8px;
+    background: #1f1f1f;
+    border: 1px solid rgba(255,255,255,0.1);
+    color: white;
+    cursor: pointer;
+}
+
+.slot:hover {
+    background: #2a2a2a;
+}
+
+.slot.active {
+    background: white;
+    color: black;
+    font-weight: bold;
+}

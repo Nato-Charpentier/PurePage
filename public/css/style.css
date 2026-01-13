@@ -1,0 +1,98 @@
+.hero-bg {
+    background:
+        radial-gradient(200px 100px at 20% 0%, rgba(16, 185, 129, 0.14), transparent 60%),
+        radial-gradient(250px 120px at 80% 20%, rgba(56, 189, 248, 0.16), transparent 60%),
+        linear-gradient(180deg, #0f1021, #0b0c1a);
+}
+
+.card {
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 16px;
+    padding: 18px;
+    backdrop-filter: blur(6px)
+}
+
+.icon {
+    display: grid;
+    place-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, .08);
+    margin-bottom: 10px
+}
+
+.thumb {
+    aspect-ratio: 16/9;
+    background: linear-gradient(135deg, rgba(6, 95, 70, .3), rgba(56, 189, 248, .25));
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.12)
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 14px;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    background: rgba(255, 255, 255, 0.06)
+}
+
+.btn-primary {
+    background: #fff;
+    color: #111;
+    box-shadow: 0 8px 18px rgba(0, 0, 0, .25)
+}
+
+.modal {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, .6);
+    display: grid;
+    place-items: center;
+    padding: 16px;
+    z-index: 50
+}
+
+.modal.hidden {
+    display: none
+}
+
+.modal-card {
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 16px;
+    max-width: 920px;
+    width: 100%;
+    padding: 16px
+}
+
+.modal-close {
+    position: absolute;
+    right: 8px;
+    top: 8px;
+    background: #fff;
+    color: #000;
+    border: 0;
+    border-radius: 999px;
+    width: 32px;
+    height: 32px;
+    cursor: pointer
+}
+
+.modal-content {
+    min-height: 240px;
+    background: linear-gradient(135deg, rgba(6, 95, 70, .35), rgba(56, 189, 248, .35));
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    padding: 16px
+}
+
+.modal-actions {
+    display: flex;
+    gap: 8px;
+    justify-content: flex-end;
+    margin-top: 12px
+}
