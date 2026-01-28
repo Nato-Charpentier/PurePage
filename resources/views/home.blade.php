@@ -116,19 +116,23 @@
             <h2 class="text-2xl font-semibold md:text-3xl">Exemples de maquettes</h2>
             <p class="mt-2 max-w-2xl text-white/70">Maquettes non contractuelles — idéales pour se projeter rapidement avant réalisation.</p>
 
+            <p class="mt-2 max-w-2xl text-white/60 text-sm">
+                Ces maquettes sont actuellement en cours de conception.
+                Elles servent d’exemples visuels pour se projeter.
+            </p>
+
             <div class="mt-8 grid grid-cols-1 gap-4 md:grid-cols-3">
                 @foreach(config('purepage.mocks') as $m)
-                <article class="relative rounded-2xl border border-white/10 bg-white/5 p-4">
+                <article class="relative rounded-2xl border border-white/10 bg-white/5 p-4 opacity-60 grayscale">
                     <div class="thumb"></div>
                     <div class="mt-4">
                         <h3 class="text-lg font-semibold">{{ $m['title'] }}</h3>
                         <p class="text-sm text-white/70">{{ $m['subtitle'] }}</p>
                     </div>
                     <div class="mt-4 flex flex-wrap gap-2">
-                        @if(Route::has('mock.' . $m['id']))
-                        <a href="{{ route('mock.' . $m['id']) }}" target="_blank" rel="noopener" class="btn btn-primary">Voir la maquette</a>
-                        @endif
-                        <a href="#" class="btn wa-open" data-text="Ia ora na ! À propos de la maquette: {{ $m['title'] }}">WhatsApp</a>
+                        <span class="inline-flex items-center rounded-full bg-yellow-500/10 border border-yellow-400/30 px-3 py-1 text-xs text-yellow-300">
+                            🚧 Maquette en cours de création
+                        </span>
                     </div>
                 </article>
                 @endforeach
