@@ -1,8 +1,8 @@
 <?php
 return [
-    'brand_name'    => env('BRAND_NAME', 'PurePage'),
+    'brand_name'    => env('BRAND_NAME', 'PurPage'),
     'tagline'       => env('TAGLINE', 'Sites vitrines & e-commerce — Polynésie'),
-    'brand_email'   => env('BRAND_EMAIL', 'purepage.pf@gmail.com'),
+    'brand_email'   => env('BRAND_EMAIL', 'purpage.pf@gmail.com'),
     'whatsapp_intl' => env('WHATSAPP_INTL', '68987218135'),
     'pricing' => [
         ['name' => 'Starter', 'price' => 30000, 'badge' => 'Idéal pour démarrer', 'features' => [

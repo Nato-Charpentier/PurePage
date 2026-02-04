@@ -16,7 +16,7 @@ class LeadController extends Controller
             'pack' => ['nullable','string','max:60'],
         ]);
 
-        Mail::to(config('purepage.brand_email'))
+        Mail::to(config('purpage.brand_email'))
             ->send(new LeadSubmitted($v['name'], $v['email'], $v['message'], $v['pack'] ?? 'Contact'));
 
         return response()->json(['ok' => true]);

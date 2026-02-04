@@ -1,5 +1,5 @@
 <x-mail::message>
-# Nouveau message — {{ config('purepage.brand_name') }}
+# Nouveau message — {{ config('purpage.brand_name') }}
 
 **Nom :** {{ $name }}  
 **Email :** {{ $email }}  

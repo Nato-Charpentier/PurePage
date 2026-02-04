@@ -29,7 +29,7 @@
                     <div class="flex h-full w-full items-center justify-center rounded-2xl bg-black/40">
                         <div class="text-center">
                             <x-logo class="w-14 h-14 mx-auto" />
-                            <div class="mt-3 text-sm text-white/70">{{ config('purepage.tagline') }}</div>
+                            <div class="mt-3 text-sm text-white/70">{{ config('purpage.tagline') }}</div>
                         </div>
                     </div>
                 </div>
@@ -47,7 +47,7 @@
             <p class="mt-2 max-w-2xl text-white/70">Choisissez ce dont vous avez besoin. Je peux intervenir à la carte ou en pack clé en main.</p>
 
             <div class="mt-8 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
-                @foreach(config('purepage.services') as $s)
+                @foreach(config('purpage.services') as $s)
                 <div class="card">
                     <div class="icon">{{ $s['icon'] }}</div>
                     <h3 class="text-lg font-semibold">{{ $s['title'] }}</h3>
@@ -65,7 +65,7 @@
             <p class="mt-2 max-w-2xl text-white/70">Des offres simples et transparentes. Tous les packs sont personnalisables selon vos objectifs.</p>
 
             <div class="mt-8 grid grid-cols-1 gap-6 md:grid-cols-3">
-                @foreach(config('purepage.pricing') as $p)
+                @foreach(config('purpage.pricing') as $p)
                 <div class="relative rounded-3xl border bg-white/5 p-6 backdrop-blur {{ $p['highlighted'] ? 'border-emerald-400/40 shadow-[0_0_0_3px_rgba(16,185,129,0.25)]' : 'border-white/10' }}">
                     @if(!empty($p['badge']))
                     <div class="absolute -top-3 left-4 rounded-full border border-white/10 bg-emerald-700/20 px-3 py-1 text-xs font-medium text-emerald-100 backdrop-blur">
@@ -99,7 +99,7 @@
             <p class="mt-2 max-w-2xl text-white/70">Une méthode claire, sans jargon, pour avancer vite et bien.</p>
 
             <div class="mt-8 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
-                @foreach(config('purepage.steps') as $s)
+                @foreach(config('purpage.steps') as $s)
                 <div class="card">
                     <div class="mb-2 inline-grid place-items-center w-9 h-9 rounded-lg bg-white/10 text-lg">{{ $s['icon'] }}</div>
                     <h3 class="font-semibold">{{ $s['t'] }}</h3>
@@ -122,7 +122,7 @@
             </p>
 
             <div class="mt-8 grid grid-cols-1 gap-4 md:grid-cols-3">
-                @foreach(config('purepage.mocks') as $m)
+                @foreach(config('purpage.mocks') as $m)
                 <article class="relative rounded-2xl border border-white/10 bg-white/5 p-4 opacity-60 grayscale">
                     <div class="thumb"></div>
                     <div class="mt-4">
@@ -359,8 +359,8 @@
                     <div class="card">
                         <h3 class="font-semibold">Contact direct</h3>
                         <div class="mt-3 space-y-2 text-sm">
-                            <a href="mailto:{{ config('purepage.brand_email') }}" class="flex items-center gap-2 text-white/90 hover:underline">✉️ {{ config('purepage.brand_email') }}</a>
-                            <a href="#" class="flex items-center gap-2 text-white/90 hover:underline wa-open" data-text="Ia ora na ! Je souhaite parler de mon projet web.">📱 WhatsApp {{ config('purepage.whatsapp_intl') }}</a>
+                            <a href="mailto:{{ config('purpage.brand_email') }}" class="flex items-center gap-2 text-white/90 hover:underline">✉️ {{ config('purpage.brand_email') }}</a>
+                            <a href="#" class="flex items-center gap-2 text-white/90 hover:underline wa-open" data-text="Ia ora na ! Je souhaite parler de mon projet web.">📱 WhatsApp {{ config('purpage.whatsapp_intl') }}</a>
                             <div class="flex items-center gap-2 text-white/70">🌍 Papeete, Polynésie française</div>
                         </div>
                         <p class="mt-3 text-xs text-white/60">*Mentions légales & CGV disponibles sur demande.</p>

@@ -1,7 +1,7 @@
 const ROOT = document.documentElement;
 const BRAND = {
-    name: ROOT.dataset.brand || 'PurePage',
-    email: ROOT.dataset.email || 'purepage.pf@gmail.com',
+    name: ROOT.dataset.brand || 'PurPage',
+    email: ROOT.dataset.email || 'purpage.pf@gmail.com',
     tagline: ROOT.dataset.tagline || '',
     wa: ROOT.dataset.wa || '68987218135',
 };

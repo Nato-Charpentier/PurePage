@@ -6,6 +6,6 @@ class PageController extends Controller
 {
     public function home()
     {
-        return view('home', ['data' => config('purepage')]);
+        return view('home', ['data' => config('purpage')]);
     }
 }

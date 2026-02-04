@@ -1,20 +1,20 @@
 <!doctype html>
 <html lang="fr"
-  data-brand="{{ config('purepage.brand_name') }}"
-  data-email="{{ config('purepage.brand_email') }}"
-  data-tagline="{{ config('purepage.tagline') }}"
-  data-wa="{{ config('purepage.whatsapp_intl') }}">
+  data-brand="{{ config('purpage.brand_name') }}"
+  data-email="{{ config('purpage.brand_email') }}"
+  data-tagline="{{ config('purpage.tagline') }}"
+  data-wa="{{ config('purpage.whatsapp_intl') }}">
 
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="csrf-token" content="{{ csrf_token() }}" />
   {{-- Favicon (.ico) --}}
-  <link rel="icon" type="image/x-icon" href="{{ asset('img/purepage-favicon.ico') }}">
+  <link rel="icon" type="image/x-icon" href="{{ asset('img/logo-v0.2.ico') }}">
   {{-- Bonus conseillés --}}
-  <link rel="shortcut icon" href="{{ asset('img/purepage-favicon.ico') }}">
+  <link rel="shortcut icon" href="{{ asset('img/logo-v0.2.ico') }}">
   <meta name="theme-color" content="#0b0c1a">
-  <title>{{ config('purepage.brand_name') }} — Création de sites</title>
+  <title>{{ config('purpage.brand_name') }} — Création de sites</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="{{ asset('css/style.css') }}" />
 </head>
@@ -24,7 +24,7 @@
     <div class="container mx-auto max-w-6xl flex items-center justify-between px-4 py-3">
       <div class="flex items-center gap-2">
         <x-logo class="w-14 h-14 mx-auto" />
-        <span class="font-semibold tracking-wide">{{ config('purepage.brand_name') }}</span>
+        <span class="font-semibold tracking-wide">{{ config('purpage.brand_name') }}</span>
       </div>
       <nav class="hidden md:flex items-center gap-6">
         @foreach(['services'=>'Services','packs'=>'Packs & tarifs','process'=>'Process','portfolio'=>'Portfolio','avis'=>'Avis','faq'=>'FAQ'] as $id=>$lbl)
@@ -48,7 +48,7 @@
 
   <footer class="border-t border-white/10 py-10">
     <div class="mx-auto flex max-w-6xl flex-col items-center justify-between gap-4 px-4 text-sm text-white/70 md:flex-row">
-      <div>© {{ now()->year }} {{ config('purepage.brand_name') }} — Tous droits réservés.</div>
+      <div>© {{ now()->year }} {{ config('purpage.brand_name') }} — Tous droits réservés.</div>
       <div class="flex items-center gap-4">
         <a href="#" class="hover:underline">Mentions légales</a>
         <a href="#" class="hover:underline">CGV</a>
