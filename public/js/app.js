@@ -99,17 +99,55 @@ function bindForm() {
     const form = document.getElementById('contact-form');
     const status = document.getElementById('submit-status');
     const token = document.querySelector('meta[name="csrf-token"]').getAttribute('content');
+    const startedAtInput = form?.querySelector('#started_at');
+    
+    if (startedAtInput) {
+        startedAtInput.value = Date.now();
+    }
+
+    const submitBtn = form?.querySelector('button[type="submit"]');
+
     form?.addEventListener('submit', async (e) => {
         e.preventDefault();
+
+        // 🔒 ANTI DOUBLE-CLIC (ICI 👇)
+        if (submitBtn) {
+            submitBtn.disabled = true;
+            submitBtn.textContent = 'Envoi…';
+        }
+
         const fd = new FormData(form);
         const data = Object.fromEntries(fd.entries());
         status.textContent = 'Envoi…';
+
         try {
-            const res = await fetch('/lead', { method: 'POST', headers: { 'Content-Type': 'application/json', 'X-CSRF-TOKEN': token }, body: JSON.stringify(data) });
+            const res = await fetch('/lead', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'X-CSRF-TOKEN': token
+                },
+                body: JSON.stringify(data)
+            });
+
             const json = await res.json();
-            if (json.ok) { status.textContent = 'Message envoyé ✔'; form.reset(); }
-            else { throw new Error(json.error || 'Erreur serveur'); }
-        } catch (err) { status.textContent = 'Erreur: ' + (err.message || err); }
+
+            if (json.ok) {
+                status.textContent = 'Message envoyé ✔';
+                form.reset();
+            } else {
+                throw new Error(json.error || 'Erreur serveur');
+            }
+
+        } catch (err) {
+            status.textContent = 'Erreur: ' + (err.message || err);
+        } finally {
+            // 🔓 ON RÉACTIVE LE BOUTON
+            if (submitBtn) {
+                submitBtn.disabled = false;
+                submitBtn.textContent = 'Envoyer ma demande →';
+            }
+        }
     });
 }
 
@@ -121,24 +159,19 @@ function selfTests() {
 }
 
 //FAQ
-function toggleItem(id) {
-      const content = document.getElementById(`content-${id}`);
-      const iconPlus = document.getElementById(`icon-plus-${id}`);
-      const iconMinus = document.getElementById(`icon-minus-${id}`);
-      
-      if (content.style.maxHeight) {
-        content.style.maxHeight = null;
-        arrow.classList.remove('rotate-180');
-      } else {
-        content.style.maxHeight = content.scrollHeight + 'px';
-        arrow.classList.add('rotate-180');
-      }
+document.querySelectorAll(".faq-question").forEach(button => {
+  button.addEventListener("click", () => {
+    const answer = button.nextElementSibling;
+    const icon = button.querySelector("span");
 
-      setTimeout(() => {
-        content.classList.toggle('hidden');
-      }, 300);
-      iconPlus.classList.toggle('hidden');
-      iconMinus.classList.toggle('hidden');
-  }
+    if (answer.style.maxHeight) {
+      answer.style.maxHeight = null;
+      icon.textContent = "+";
+    } else {
+      answer.style.maxHeight = answer.scrollHeight + "px";
+      icon.textContent = "−";
+    }
+  });
+});
 
-document.addEventListener('DOMContentLoaded', () => { bindMenu(); bindSmoothScroll(); bindWhatsApp(); bindMocks(); bindForm(); selfTests(); });
+document.addEventListener('DOMContentLoaded', () => { bindMenu(); bindSmoothScroll(); bindMocks(); bindForm(); selfTests(); });

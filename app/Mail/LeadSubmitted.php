@@ -20,5 +20,5 @@ class LeadSubmitted extends Mailable
     {
         return $this->subject('Nouveau message ('.$this->pack.') — '.config('purpage.brand_name'))
                     ->markdown('emails.lead_submitted');
-    }
+                }
 }

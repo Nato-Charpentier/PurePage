@@ -41,7 +41,7 @@
     </section>
 
     {{-- SERVICES --}}
-    <section id="services" class="border-t border-white/10 py-16">
+    <section id="services" class="border-t border-white/10 py-12 md:py-16">
         <div class="mx-auto max-w-6xl px-4">
             <h2 class="text-2xl font-semibold md:text-3xl">Services</h2>
             <p class="mt-2 max-w-2xl text-white/70">Choisissez ce dont vous avez besoin. Je peux intervenir à la carte ou en pack clé en main.</p>
@@ -59,7 +59,7 @@
     </section>
 
     {{-- PACKS --}}
-    <section id="packs" class="border-t border-white/10 py-16">
+    <section id="packs" class="border-t border-white/10 py-12 md:py-16">
         <div class="mx-auto max-w-6xl px-4">
             <h2 class="text-2xl font-semibold md:text-3xl">Packs & tarifs</h2>
             <p class="mt-2 max-w-2xl text-white/70">Des offres simples et transparentes. Tous les packs sont personnalisables selon vos objectifs.</p>
@@ -93,7 +93,7 @@
     </section>
 
     {{-- PROCESS --}}
-    <section id="process" class="border-t border-white/10 py-16">
+    <section id="process" class="border-t border-white/10  py-12 md:py-16">
         <div class="mx-auto max-w-6xl px-4">
             <h2 class="text-2xl font-semibold md:text-3xl">Mon process</h2>
             <p class="mt-2 max-w-2xl text-white/70">Une méthode claire, sans jargon, pour avancer vite et bien.</p>
@@ -111,7 +111,7 @@
     </section>
 
     {{-- PORTFOLIO / Maquettes --}}
-    <section id="portfolio" class="border-t border-white/10 py-16">
+    <section id="portfolio" class="border-t border-white/10 py-12 md:py-16">
         <div class="mx-auto max-w-6xl px-4">
             <h2 class="text-2xl font-semibold md:text-3xl">Exemples de maquettes</h2>
             <p class="mt-2 max-w-2xl text-white/70">Maquettes non contractuelles — idéales pour se projeter rapidement avant réalisation.</p>
@@ -153,9 +153,9 @@
     </div>
 
     {{-- AVIS --}}
-    <section id="avis" class="border-t border-white/10 py-20">
-        <div class="mx-auto max-w-6xl px-4">
-            <h2 class="text-2xl font-semibold md:text-3xl">Avis clients</h2>
+    <section id="avis" class="border-t border-white/10 py-12 md:py-16">
+        <div class="mx-auto px-4">
+            <h2 class="font-semibold md:text-3xl">Avis clients</h2>
             <div class="card mt-8">
                 <p class="text-white/90"><strong>Les premiers avis arrivent.</strong> Devenez <strong>client pilote</strong> : on construit votre site ensemble, et vous partagez un retour transparent.</p>
                 <div class="mt-4 flex flex-wrap gap-3">
@@ -167,166 +167,56 @@
     </section>
 
     {{-- FAQ --}}
-    <section id="faq" class="border-t border-white/10 py-16">
-        <div class="mx-auto max-w-6xl px-4">
-            <h2 class="text-2xl font-semibold md:text-3xl">Questions fréquentes</h2>
-            <div class="space-y-6 mt-8">
-                <!-- Item 1 -->
-                <div class="bg-gray-800 shadow-md rounded-lg">
-                    <button
-                        class="w-full flex items-center justify-between p-4 focus:outline-none"
-                        onclick="toggleItem(1)"
-                        aria-expanded="false"
-                        aria-controls="content-1"
-                        id="faq-button-1">
-                        <span class="text-lg font-semibold">
-                            Combien de temps pour livrer un site ?
-                        </span>
-                        <svg
-                            id="icon-plus-1"
-                            class="w-6 h-6 text-gray-400"
-                            fill="currentColor"
-                            viewBox="0 0 20 20">
-                            <!-- Plus Icon Path -->
-                            <path
-                                d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z" />
-                        </svg>
-                        <svg
-                            id="icon-minus-1"
-                            class="w-6 h-6 text-gray-400 hidden"
-                            fill="currentColor"
-                            viewBox="0 0 20 20">
-                            <!-- Minus Icon Path -->
-                            <path
-                                d="M5 10a1 1 0 011-1h8a1 1 0 110 2H6a1 1 0 01-1-1z" />
-                        </svg>
-                    </button>
-                    <div
-                        id="content-1"
-                        class="text-gray-300 overflow-hidden max-h-0 transition-all duration-500"
-                        role="region"
-                        aria-labelledby="faq-button-1">
-                        <p class="p-4">Starter : 7–10 jours. Pro : 2–3 semaines. E-commerce : 3–5 semaines.</p>
-                    </div>
-                </div>
+    <section id="faq" class="faq-section">
+        <h2>Questions fréquentes</h2>
 
-                <!-- Item 2 -->
-                <div class="bg-gray-800 shadow-md rounded-lg">
-                    <button
-                        class="w-full flex items-center justify-between p-4 focus:outline-none"
-                        onclick="toggleItem(2)"
-                        aria-expanded="false"
-                        aria-controls="content-2"
-                        id="faq-button-2">
-                        <span class="text-lg font-semibold">Les textes et images sont-ils fournis ?</span>
-                        <svg
-                            id="icon-plus-2"
-                            class="w-6 h-6 text-gray-400"
-                            fill="currentColor"
-                            viewBox="0 0 20 20">
-                            <!-- Plus Icon Path -->
-                            <path
-                                d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z" />
-                        </svg>
-                        <svg
-                            id="icon-minus-2"
-                            class="w-6 h-6 text-gray-400 hidden"
-                            fill="currentColor"
-                            viewBox="0 0 20 20">
-                            <!-- Minus Icon Path -->
-                            <path
-                                d="M5 10a1 1 0 011-1h8a1 1 0 110 2H6a1 1 0 01-1-1z" />
-                        </svg>
-                    </button>
-                    <div
-                        id="content-2"
-                        class="text-gray-300 overflow-hidden max-h-0 transition-all duration-500"
-                        role="region"
-                        aria-labelledby="faq-button-2">
-                        <p class="p-4">Vous fournissez les contenus. Aide à la rédaction et banque d’images possibles.</p>
-                    </div>
-                </div>
+        <div class="faq-grid">
 
-                <!-- Item 3 -->
-                <div class="bg-gray-800 shadow-md rounded-lg">
-                    <button
-                        class="w-full flex items-center justify-between p-4 focus:outline-none"
-                        onclick="toggleItem(3)"
-                        aria-expanded="false"
-                        aria-controls="content-3"
-                        id="faq-button-3">
-                        <span class="text-lg font-semibold">Puis-je payer en plusieurs fois ?</span>
-                        <svg
-                            id="icon-plus-3"
-                            class="w-6 h-6 text-gray-400"
-                            fill="currentColor"
-                            viewBox="0 0 20 20">
-                            <!-- Plus Icon Path -->
-                            <path
-                                d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z" />
-                        </svg>
-                        <svg
-                            id="icon-minus-3"
-                            class="w-6 h-6 text-gray-400 hidden"
-                            fill="currentColor"
-                            viewBox="0 0 20 20">
-                            <!-- Minus Icon Path -->
-                            <path
-                                d="M5 10a1 1 0 011-1h8a1 1 0 110 2H6a1 1 0 01-1-1z" />
-                        </svg>
-                    </button>
-                    <div
-                        id="content-3"
-                        class="text-gray-300 overflow-hidden max-h-0 transition-all duration-500"
-                        role="region"
-                        aria-labelledby="faq-button-3">
-                        <p class="p-4">Oui : 40% à la commande, 40% maquette validée, 20% mise en ligne.</p>
-                    </div>
+            <div class="faq-item">
+                <button class="faq-question">
+                    Combien de temps pour livrer un site ?
+                    <span>+</span>
+                </button>
+                <div class="faq-answer">
+                    <p>En général entre 3 et 7 jours selon le projet.</p>
                 </div>
-
-                <!-- Item 4 -->
-                <div class="bg-gray-800 shadow-md rounded-lg">
-                    <button
-                        class="w-full flex items-center justify-between p-4 focus:outline-none"
-                        onclick="toggleItem(4)"
-                        aria-expanded="false"
-                        aria-controls="content-4"
-                        id="faq-button-4">
-                        <span class="text-lg font-semibold">Gérez-vous le domaine & l’hébergement ?</span>
-                        <svg
-                            id="icon-plus-4"
-                            class="w-6 h-6 text-gray-400"
-                            fill="currentColor"
-                            viewBox="0 0 20 20">
-                            <!-- Plus Icon Path -->
-                            <path
-                                d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z" />
-                        </svg>
-                        <svg
-                            id="icon-minus-4"
-                            class="w-6 h-6 text-gray-400 hidden"
-                            fill="currentColor"
-                            viewBox="0 0 20 20">
-                            <!-- Minus Icon Path -->
-                            <path
-                                d="M5 10a1 1 0 011-1h8a1 1 0 110 2H6a1 1 0 01-1-1z" />
-                        </svg>
-                    </button>
-                    <div
-                        id="content-4"
-                        class="text-gray-300 overflow-hidden max-h-0 transition-all duration-500"
-                        role="region"
-                        aria-labelledby="faq-button-4">
-                        <p class="p-4">Oui, je peux tout gérer pour vous ou vous guider.</p>
-                    </div>
-                </div>
-                <!-- Add more items as needed -->
             </div>
+
+            <div class="faq-item">
+                <button class="faq-question">
+                    Les textes et images sont-ils fournis ?
+                    <span>+</span>
+                </button>
+                <div class="faq-answer">
+                    <p>Oui, ou je peux t’aider à les créer.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">
+                    Puis-je payer en plusieurs fois ?
+                    <span>+</span>
+                </button>
+                <div class="faq-answer">
+                    <p>Oui, paiement possible en plusieurs fois.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">
+                    Gérez-vous le domaine & l’hébergement ?
+                    <span>+</span>
+                </button>
+                <div class="faq-answer">
+                    <p>Oui, je m’occupe de tout si besoin.</p>
+                </div>
+            </div>
+
         </div>
     </section>
 
     {{-- CONTACT --}}
-    <section id="contact" class="border-t border-white/10 py-16">
+    <section id="contact" class="border-t border-white/10 py-12 md:py-16">
         <div class="mx-auto max-w-6x1 px-4">
             <h2 class="text-2xl font-semibold md:text-3xl">Parlons de votre projet</h2>
             <p class="mt-2 max-w-2xl text-white/70">Expliquez vos objectifs, je reviens vers vous sous 24h ouvrées.</p>
@@ -334,23 +224,50 @@
             <div class="mt-8 grid grid-cols-1 gap-6 md:grid-cols-3">
                 <div class="card md:col-span-2">
                     <form id="contact-form" class="grid grid-cols-1 gap-8 sm:grid-cols-2">
-                        <input type="hidden" name="pack" value="Contact" />
+                        @csrf
+
+                        <input type="hidden" name="started_at" id="started_at">
+
+                        <input type="text" name="website" class="hidden" tabindex="-1" autocomplete="off">
+
                         <div>
                             <label class="text-xs text-white/70">Nom</label>
-                            <input name="name" required class="mt-1 w-full rounded-xl border border-white/10 bg-black/30 px-3 py-2 text-sm outline-none placeholder:text-white/40" placeholder="Votre nom" />
+                            <input
+                                name="name"
+                                required
+                                class="mt-1 w-full rounded-xl border border-white/10 bg-black/30 px-3 py-2 text-sm outline-none placeholder:text-white/40"
+                                placeholder="Votre nom" />
                         </div>
+
                         <div>
                             <label class="text-xs text-white/70">Email</label>
-                            <input name="email" type="email" required class="mt-1 w-full rounded-xl border border-white/10 bg-black/30 px-3 py-2 text-sm outline-none placeholder:text-white/40" placeholder="vous@exemple.com" />
+                            <input
+                                name="email"
+                                type="email"
+                                required
+                                class="mt-1 w-full rounded-xl border border-white/10 bg-black/30 px-3 py-2 text-sm outline-none placeholder:text-white/40"
+                                placeholder="vous@exemple.com" />
                         </div>
+
                         <div class="sm:col-span-2">
                             <label class="text-xs text-white/70">Message</label>
-                            <textarea name="message" rows="5" required class="mt-1 w-full rounded-xl border border-white/10 bg-black/30 px-3 py-2 text-sm outline-none placeholder:text-white/40" placeholder="Parlez-moi de votre projet (objectifs, délais, budget)…"></textarea>
+                            <textarea
+                                name="message"
+                                rows="5"
+                                required
+                                class="mt-1 w-full rounded-xl border border-white/10 bg-black/30 px-3 py-2 text-sm outline-none placeholder:text-white/40"
+                                placeholder="Parlez-moi de votre projet (objectifs, délais, budget)…"></textarea>
                         </div>
+
                         <div class="sm:col-span-2 flex flex-wrap items-center gap-3">
-                            <button type="submit" class="inline-flex items-center gap-2 rounded-xl bg-white px-5 py-2.5 font-semibold text-black shadow hover:shadow-lg">Envoyer ma demande →</button>
+                            <button
+                                id="submitBtn" type="submit"
+                                class="inline-flex items-center gap-2 rounded-xl bg-white px-5 py-2.5 font-semibold text-black shadow hover:shadow-lg">
+                                Envoyer ma demande →
+                            </button>
+
                             <span class="text-xs" id="submit-status"></span>
-                            <a href="#" class="text-sm text-white/80 underline-offset-4 hover:underline" id="calendar-link">ou réservez un créneau (Calendly)</a>
+
                         </div>
                     </form>
                 </div>
@@ -368,13 +285,19 @@
 
                     <div class="card">
                         <h3 class="font-semibold">Réservation</h3>
-                        <p class="mt-2 text-sm text-white/80">Intégrez ici votre lien Calendly / Cal.com :</p>
                         <div class="mt-3 overflow-hidden rounded-xl border border-white/10">
-                            <div class="grid h-36 place-items-center text-xs text-white/60">Iframe Calendly (à insérer)</div>
+                            <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+                            <script src="https://assets.calendly.com/assets/external/widget.js" async></script>
+
+                            <button
+                                class="w-full bg-blue-600 text-white py-3 rounded-xl font-semibold hover:bg-blue-700 transition"
+                                onclick="Calendly.initPopupWidget({url: 'https://calendly.com/ncharp14/new-meeting?primary_color=0e2b5d'}); return false;">
+                                Réserver un appel gratuit
+                            </button>
+
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
     </section>
 </x-layouts.app>

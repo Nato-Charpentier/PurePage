@@ -1,3 +1,4 @@
+/* Global Styles */
 .hero-bg {
     background:
         radial-gradient(200px 100px at 20% 0%, rgba(16, 185, 129, 0.14), transparent 60%),
@@ -5,14 +6,20 @@
         linear-gradient(180deg, #0f1021, #0b0c1a);
 }
 
+/* Card Styles */
 .card {
     background: rgba(255, 255, 255, 0.06);
     border: 1px solid rgba(255, 255, 255, 0.12);
     border-radius: 16px;
     padding: 18px;
-    backdrop-filter: blur(6px)
+    backdrop-filter: blur(6px);
+    align-items: flex-start;
+    gap: 24px;
+    height: fit-content;
+
 }
 
+/* Icon Styles */
 .icon {
     display: grid;
     place-items: center;
@@ -23,6 +30,7 @@
     margin-bottom: 10px
 }
 
+/* Thumbnail Styles */
 .thumb {
     aspect-ratio: 16/9;
     background: linear-gradient(135deg, rgba(6, 95, 70, .3), rgba(56, 189, 248, .25));
@@ -30,6 +38,7 @@
     border: 1px solid rgba(255, 255, 255, 0.12)
 }
 
+/* Button Styles */
 .btn {
     display: inline-flex;
     align-items: center;
@@ -46,6 +55,7 @@
     box-shadow: 0 8px 18px rgba(0, 0, 0, .25)
 }
 
+/* Modal Styles */
 .modal {
     position: fixed;
     inset: 0;
@@ -95,4 +105,81 @@
     gap: 8px;
     justify-content: flex-end;
     margin-top: 12px
+}
+
+/* FAQ Section */
+.faq-section {
+    margin-left: auto; /* pousse à droite */
+    padding: 40px 20px 80px; /* moins d'espace en haut */
+}
+
+.faq-section h2 {
+    color: white;
+    font-size: 32px;
+    margin-bottom: 40px;
+}
+
+/* GRID 2 colonnes */
+.faq-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+/* ITEM */
+.faq-item {
+    width: 100%;
+}
+
+/* QUESTION */
+.faq-question {
+    width: 100%;
+    background: #1e293b;
+    color: white;
+    padding: 20px;
+    border: none;
+    border-radius: 12px;
+    text-align: left;
+    font-size: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.faq-question:hover {
+    background: #334155;
+}
+
+/* + / - */
+.faq-question span {
+    font-size: 20px;
+    transition: 0.3s;
+}
+
+/* ANSWER */
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: 0.3s ease;
+    background: #0f172a;
+    border-radius: 0 0 12px 12px;
+}
+
+.faq-answer p {
+    padding: 15px 20px;
+    color: #cbd5f5;
+    font-size: 14px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .faq-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .faq-section {
+        margin-left: 0;
+    }
 }
