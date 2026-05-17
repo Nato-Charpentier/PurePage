@@ -6,7 +6,6 @@ RUN apt-get update && apt-get install -y \
     git \
     libzip-dev \
     zip \
-    npm \
     sqlite3 \
     && docker-php-ext-install zip
 
@@ -17,8 +16,6 @@ WORKDIR /app
 COPY . .
 
 RUN composer install --no-dev --optimize-autoloader
-
-RUN npm install && npm run build
 
 RUN touch database/database.sqlite
 
