@@ -175,3 +175,26 @@ document.querySelectorAll(".faq-question").forEach(button => {
 });
 
 document.addEventListener('DOMContentLoaded', () => { bindMenu(); bindSmoothScroll(); bindMocks(); bindForm(); selfTests(); });
+
+// =========================
+// REVEAL ON SCROLL
+// =========================
+
+function revealOnScroll() {
+    const reveals = document.querySelectorAll('.reveal');
+
+    reveals.forEach(el => {
+        const windowHeight = window.innerHeight;
+        const top = el.getBoundingClientRect().top;
+
+        if (top < windowHeight - 80) {
+            el.classList.add('active');
+        }
+    });
+}
+
+window.addEventListener('scroll', revealOnScroll);
+
+document.addEventListener('DOMContentLoaded', () => {
+    revealOnScroll();
+});

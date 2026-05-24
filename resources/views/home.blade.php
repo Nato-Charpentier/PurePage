@@ -41,55 +41,55 @@
     </section>
 
     {{-- SERVICES --}}
-    <section id="services" class="border-t border-white/10 py-12 md:py-16">
-        <div class="mx-auto max-w-6xl px-4">
-            <h2 class="text-2xl font-semibold md:text-3xl">Services</h2>
-            <p class="mt-2 max-w-2xl text-white/70">Choisissez ce dont vous avez besoin. Je peux intervenir à la carte ou en pack clé en main.</p>
+    <section id="services" class="reveal border-t border-white/10 py-16">
+            <div class="mx-auto max-w-6xl px-4 card glow">
+                <h2 class="text-2xl font-semibold md:text-3xl">Services</h2>
+                <p class="mt-2 max-w-2xl text-white/70">Choisissez ce dont vous avez besoin. Je peux intervenir à la carte ou en pack clé en main.</p>
 
-            <div class="mt-8 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
-                @foreach(config('purpage.services') as $s)
-                <div class="card">
-                    <div class="icon">{{ $s['icon'] }}</div>
-                    <h3 class="text-lg font-semibold">{{ $s['title'] }}</h3>
-                    <p class="mt-1 text-sm text-white/80">{{ $s['desc'] }}</p>
+                <div class="mt-8 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+                    @foreach(config('purpage.services') as $s)
+                    <div class="card">
+                        <div class="icon">{{ $s['icon'] }}</div>
+                        <h3 class="text-lg font-semibold">{{ $s['title'] }}</h3>
+                        <p class="mt-1 text-sm text-white/80">{{ $s['desc'] }}</p>
+                    </div>
+                    @endforeach
                 </div>
-                @endforeach
             </div>
-        </div>
     </section>
 
     {{-- PACKS --}}
-    <section id="packs" class="border-t border-white/10 py-12 md:py-16">
-        <div class="mx-auto max-w-6xl px-4">
-            <h2 class="text-2xl font-semibold md:text-3xl">Packs & tarifs</h2>
-            <p class="mt-2 max-w-2xl text-white/70">Des offres simples et transparentes. Tous les packs sont personnalisables selon vos objectifs.</p>
+    <section id="packs" class="reveal border-t border-white/10 py-16">
+            <div class="mx-auto max-w-6xl px-4 card glow">
+                <h2 class="text-2xl font-semibold md:text-3xl">Packs & tarifs</h2>
+                <p class="mt-2 max-w-2xl text-white/70">Des offres simples et transparentes. Tous les packs sont personnalisables selon vos objectifs.</p>
 
-            <div class="mt-8 grid grid-cols-1 gap-6 md:grid-cols-3">
-                @foreach(config('purpage.pricing') as $p)
-                <div class="relative rounded-3xl border bg-white/5 p-6 backdrop-blur {{ $p['highlighted'] ? 'border-emerald-400/40 shadow-[0_0_0_3px_rgba(16,185,129,0.25)]' : 'border-white/10' }}">
-                    @if(!empty($p['badge']))
-                    <div class="absolute -top-3 left-4 rounded-full border border-white/10 bg-emerald-700/20 px-3 py-1 text-xs font-medium text-emerald-100 backdrop-blur">
-                        {{ $p['badge'] }}
+                <div class="mt-8 grid grid-cols-1 gap-6 md:grid-cols-3">
+                    @foreach(config('purpage.pricing') as $p)
+                    <div class="relative rounded-3xl border bg-white/5 p-6 backdrop-blur {{ $p['highlighted'] ? 'border-emerald-400/40 shadow-[0_0_0_3px_rgba(16,185,129,0.25)]' : 'border-white/10' }}">
+                        @if(!empty($p['badge']))
+                        <div class="absolute -top-3 left-4 rounded-full border border-white/10 bg-emerald-700/20 px-3 py-1 text-xs font-medium text-emerald-100 backdrop-blur">
+                            {{ $p['badge'] }}
+                        </div>
+                        @endif
+
+                        <h3 class="text-xl font-semibold">{{ $p['name'] }}</h3>
+                        <div class="mt-2 text-3xl font-extrabold" data-price="{{ (int)$p['price'] }}">{{ number_format($p['price'], 0, ',', ' ') }} XPF</div>
+
+                        <ul class="mt-4 space-y-2">
+                            @foreach($p['features'] as $f)
+                            <li class="flex items-start gap-2 text-sm text-white/90">✅ {{ $f }}</li>
+                            @endforeach
+                        </ul>
+
+                        <a href="#contact" data-scroll class="mt-6 block w-full rounded-xl px-4 py-2 text-center font-semibold shadow border border-white/20 bg-white/5 text-white hover:bg-white/10">
+                            {{ $p['cta'] }}
+                        </a>
+                        <p class="mt-3 text-xs text-white/60">*Frais tiers (domaine, Stripe…) non inclus.</p>
                     </div>
-                    @endif
-
-                    <h3 class="text-xl font-semibold">{{ $p['name'] }}</h3>
-                    <div class="mt-2 text-3xl font-extrabold" data-price="{{ (int)$p['price'] }}">{{ number_format($p['price'], 0, ',', ' ') }} XPF</div>
-
-                    <ul class="mt-4 space-y-2">
-                        @foreach($p['features'] as $f)
-                        <li class="flex items-start gap-2 text-sm text-white/90">✅ {{ $f }}</li>
-                        @endforeach
-                    </ul>
-
-                    <a href="#contact" data-scroll class="mt-6 block w-full rounded-xl px-4 py-2 text-center font-semibold shadow border border-white/20 bg-white/5 text-white hover:bg-white/10">
-                        {{ $p['cta'] }}
-                    </a>
-                    <p class="mt-3 text-xs text-white/60">*Frais tiers (domaine, Stripe…) non inclus.</p>
+                    @endforeach
                 </div>
-                @endforeach
             </div>
-        </div>
     </section>
 
     {{-- PROCESS --}}
@@ -111,7 +111,7 @@
     </section>
 
     {{-- PORTFOLIO / Maquettes --}}
-    <section id="portfolio" class="border-t border-white/10 py-12 md:py-16">
+    <section id="portfolio" class="reveal border-t border-white/10 py-16">
         <div class="mx-auto max-w-6xl px-4">
             <h2 class="text-2xl font-semibold md:text-3xl">Exemples de maquettes</h2>
             <p class="mt-2 max-w-2xl text-white/70">Maquettes non contractuelles — idéales pour se projeter rapidement avant réalisation.</p>
@@ -153,8 +153,8 @@
     </div>
 
     {{-- AVIS --}}
-    <section id="avis" class="border-t border-white/10 py-12 md:py-16">
-        <div class="mx-auto px-4">
+    <section id="avis" class="reveal border-t border-white/10 py-16">
+        <div class="mx-auto px-4 card glow">
             <h2 class="font-semibold md:text-3xl">Avis clients</h2>
             <div class="card mt-8">
                 <p class="text-white/90"><strong>Les premiers avis arrivent.</strong> Devenez <strong>client pilote</strong> : on construit votre site ensemble, et vous partagez un retour transparent.</p>
@@ -167,7 +167,7 @@
     </section>
 
     {{-- FAQ --}}
-    <section id="faq" class="faq-section">
+    <section id="faq" class="reveal faq-section">
         <h2>Questions fréquentes</h2>
 
         <div class="faq-grid">
@@ -217,7 +217,7 @@
 
     {{-- CONTACT --}}
     <section id="contact" class="border-t border-white/10 py-12 md:py-16">
-        <div class="mx-auto max-w-6x1 px-4">
+        <div class="mx-auto max-w-6x1 px-4 card glow">
             <h2 class="text-2xl font-semibold md:text-3xl">Parlons de votre projet</h2>
             <p class="mt-2 max-w-2xl text-white/70">Expliquez vos objectifs, je reviens vers vous sous 24h ouvrées.</p>
 

@@ -183,3 +183,88 @@
         margin-left: 0;
     }
 }
+
+/* =========================
+   PREMIUM ANIMATIONS
+========================= */
+
+.reveal {
+    opacity: 0;
+    transform: translateY(40px);
+    transition:
+        opacity 0.8s ease,
+        transform 0.8s ease;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Glow effect */
+.glow {
+    position: relative;
+    overflow: hidden;
+}
+
+.glow::before {
+    content: "";
+    position: absolute;
+    inset: -2px;
+    background:
+        linear-gradient(
+            135deg,
+            rgba(16,185,129,0.35),
+            rgba(56,189,248,0.25)
+        );
+    filter: blur(30px);
+    opacity: 0;
+    transition: opacity .4s ease;
+    z-index: -1;
+}
+
+.glow:hover::before {
+    opacity: 1;
+}
+
+/* Smooth hover */
+.card,
+.btn,
+.faq-question,
+article {
+    transition:
+        transform .35s ease,
+        box-shadow .35s ease,
+        background .35s ease,
+        border-color .35s ease;
+}
+
+.card:hover,
+article:hover {
+    transform: translateY(-4px);
+    box-shadow:
+        0 10px 30px rgba(0,0,0,.25),
+        0 0 20px rgba(16,185,129,.08);
+}
+
+/* Hero animated gradient */
+.hero-bg {
+    background:
+        radial-gradient(200px 100px at 20% 0%, rgba(16, 185, 129, 0.14), transparent 60%),
+        radial-gradient(250px 120px at 80% 20%, rgba(56, 189, 248, 0.16), transparent 60%),
+        linear-gradient(180deg, #0f1021, #0b0c1a);
+    background-size: 200% 200%;
+    animation: heroGradient 12s ease infinite;
+}
+
+@keyframes heroGradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
