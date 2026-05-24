@@ -159,7 +159,7 @@
             <div class="card mt-8">
                 <p class="text-white/90"><strong>Les premiers avis arrivent.</strong> Devenez <strong>client pilote</strong> : on construit votre site ensemble, et vous partagez un retour transparent.</p>
                 <div class="mt-4 flex flex-wrap gap-3">
-                    <a href="#contact" data-scroll class="btn btn-primary">Devenir client pilote →</a>
+                    <a href="#contact" data-scroll class="btn btn-primary">Devenir clients →</a>
                     <a href="#" class="btn wa-open" data-text="Ia ora na ! Je souhaite devenir client pilote.">Parler sur WhatsApp</a>
                 </div>
             </div>
