@@ -27,7 +27,7 @@
         <span class="font-semibold tracking-wide">{{ config('purpage.brand_name') }}</span>
       </div>
       <nav class="hidden md:flex items-center gap-6">
-        @foreach(['services'=>'Services','packs'=>'Packs & tarifs','process'=>'Process','portfolio'=>'Portfolio','avis'=>'Avis','faq'=>'FAQ'] as $id=>$lbl)
+        @foreach(['services'=>'Services','tarifs'=>'Prestations','process'=>'Process','portfolio'=>'Portfolio','avis'=>'Avis','faq'=>'FAQ'] as $id=>$lbl)
         <a href="#{{ $id }}" data-scroll class="text-sm text-white/80 hover:text-white">{{ $lbl }}</a>
         @endforeach
         <a href="#contact" data-scroll class="inline-flex items-center gap-2 rounded-xl bg-white px-4 py-2 text-sm font-semibold text-black shadow hover:shadow-lg">Devis gratuit →</a>

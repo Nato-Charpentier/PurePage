@@ -58,39 +58,71 @@
             </div>
     </section>
 
-    {{-- PACKS --}}
-    <section id="packs" class="reveal border-t border-white/10 py-16">
-            <div class="mx-auto max-w-6xl px-4 card glow">
-                <h2 class="text-2xl font-semibold md:text-3xl">Packs & tarifs</h2>
-                <p class="mt-2 max-w-2xl text-white/70">Des offres simples et transparentes. Tous les packs sont personnalisables selon vos objectifs.</p>
+    {{-- TARIFS --}}
+<section id="tarifs" class="border-t border-white/10 py-16">
+    <div class="mx-auto max-w-6xl px-4">
 
-                <div class="mt-8 grid grid-cols-1 gap-6 md:grid-cols-3">
-                    @foreach(config('purpage.pricing') as $p)
-                    <div class="relative rounded-3xl border bg-white/5 p-6 backdrop-blur {{ $p['highlighted'] ? 'border-emerald-400/40 shadow-[0_0_0_3px_rgba(16,185,129,0.25)]' : 'border-white/10' }}">
-                        @if(!empty($p['badge']))
-                        <div class="absolute -top-3 left-4 rounded-full border border-white/10 bg-emerald-700/20 px-3 py-1 text-xs font-medium text-emerald-100 backdrop-blur">
-                            {{ $p['badge'] }}
-                        </div>
-                        @endif
+        <h2 class="text-2xl font-semibold md:text-3xl">
+            Des solutions adaptées à votre projet
+        </h2>
 
-                        <h3 class="text-xl font-semibold">{{ $p['name'] }}</h3>
-                        <div class="mt-2 text-3xl font-extrabold" data-price="{{ (int)$p['price'] }}">{{ number_format($p['price'], 0, ',', ' ') }} XPF</div>
+        <p class="mt-3 max-w-3xl text-white/70">
+            Chaque projet est unique. Le tarif dépend de vos objectifs,
+            des fonctionnalités souhaitées et du niveau de personnalisation.
+            Après un échange rapide, je vous propose un devis clair,
+            adapté à vos besoins et sans surprise.
+        </p>
 
-                        <ul class="mt-4 space-y-2">
-                            @foreach($p['features'] as $f)
-                            <li class="flex items-start gap-2 text-sm text-white/90">✅ {{ $f }}</li>
-                            @endforeach
-                        </ul>
+        <div class="mt-10 grid grid-cols-1 gap-4 md:grid-cols-2">
 
-                        <a href="#contact" data-scroll class="mt-6 block w-full rounded-xl px-4 py-2 text-center font-semibold shadow border border-white/20 bg-white/5 text-white hover:bg-white/10">
-                            {{ $p['cta'] }}
-                        </a>
-                        <p class="mt-3 text-xs text-white/60">*Frais tiers (domaine, Stripe…) non inclus.</p>
-                    </div>
-                    @endforeach
-                </div>
+            <div class="card glow">
+                <h3 class="font-semibold text-lg">🌐 Site vitrine</h3>
+                <p class="mt-2 text-white/70">
+                    Présentez votre activité avec un site moderne,
+                    responsive et optimisé pour inspirer confiance.
+                </p>
             </div>
-    </section>
+
+            <div class="card glow">
+                <h3 class="font-semibold text-lg">🛒 Site e-commerce</h3>
+                <p class="mt-2 text-white/70">
+                    Vendez vos produits en ligne avec une boutique
+                    simple, rapide et sécurisée.
+                </p>
+            </div>
+
+            <div class="card glow">
+                <h3 class="font-semibold text-lg">🚀 Landing page</h3>
+                <p class="mt-2 text-white/70">
+                    Une page conçue pour convertir vos visiteurs
+                    en prospects ou clients.
+                </p>
+            </div>
+
+            <div class="card glow">
+                <h3 class="font-semibold text-lg">🔄 Refonte de site</h3>
+                <p class="mt-2 text-white/70">
+                    Modernisation complète de votre présence en ligne
+                    pour améliorer votre image et vos performances.
+                </p>
+            </div>
+
+        </div>
+
+        <div class="mt-10 text-center">
+            <p class="mb-6 text-white/60">
+                Demandez un devis gratuit et recevez une estimation adaptée à votre projet.
+            </p>
+
+            <a href="#contact"
+               data-scroll
+               class="inline-flex items-center gap-2 rounded-xl bg-white px-6 py-3 font-semibold text-black shadow hover:shadow-lg">
+                Demander un devis gratuit →
+            </a>
+        </div>
+
+    </div>
+</section>
 
     {{-- PROCESS --}}
     <section id="process" class="border-t border-white/10  py-12 md:py-16">
