@@ -323,7 +323,7 @@
 
                             <button
                                 class="w-full bg-blue-600 text-white py-3 rounded-xl font-semibold hover:bg-blue-700 transition"
-                                onclick="Calendly.initPopupWidget({url: 'https://calendly.com/ncharp14/new-meeting?primary_color=0e2b5d'}); return false;">
+                                onclick="Calendly.initPopupWidget({url: 'https://calendly.com/purpage/new-meeting'}); return false;">
                                 Réserver un appel gratuit
                             </button>
 
