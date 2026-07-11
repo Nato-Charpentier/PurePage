@@ -11,12 +11,12 @@
   <meta name="csrf-token" content="{{ csrf_token() }}" />
   {{-- Favicon (.ico) --}}
   <link rel="icon" type="image/x-icon" href="{{ asset('img/logo-v0.2.ico') }}">
-  {{-- Bonus conseillés --}}
   <link rel="shortcut icon" href="{{ asset('img/logo-v0.2.ico') }}">
   <meta name="theme-color" content="#0b0c1a">
   <title>{{ config('purpage.brand_name') }} — Création de sites</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="stylesheet" href="{{ asset('css/style.css') }}" />
+  <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+  <script src="https://assets.calendly.com/assets/external/widget.js" async></script>
+  @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 
 <body class="min-h-screen text-white bg-[#0b0c1a]">
@@ -36,7 +36,7 @@
     </div>
     <div class="nav-mobile hidden md:hidden border-t border-white/10 bg-black/60 px-4 py-3">
       <div class="flex flex-col gap-2">
-        @foreach(['services','packs','process','portfolio','avis','faq'] as $id)
+        @foreach(['services','tarifs','process','portfolio','avis','faq'] as $id)
         <a href="#{{ $id }}" data-scroll class="rounded-lg px-2 py-2 text-left text-sm text-white/80 hover:bg-white/5">{{ ucfirst($id) }}</a>
         @endforeach
         <a href="#contact" data-scroll class="mt-2 inline-flex items-center justify-center gap-2 rounded-xl bg-white px-4 py-2 text-sm font-semibold text-black">Devis gratuit →</a>
@@ -50,17 +50,13 @@
     <div class="mx-auto flex max-w-6xl flex-col items-center justify-between gap-4 px-4 text-sm text-white/70 md:flex-row">
       <div>© {{ now()->year }} {{ config('purpage.brand_name') }} — Tous droits réservés.</div>
       <div class="flex items-center gap-4">
-        <a href="#" class="hover:underline">Mentions légales</a>
-        <a href="#" class="hover:underline">CGV</a>
-        <a href="#" class="hover:underline">Politique de confidentialité</a>
+        <span>Mentions légales, CGV et confidentialité disponibles sur demande</span>
       </div>
     </div>
   </footer>
 
   <a class="fixed bottom-5 right-5 inline-flex items-center gap-2 rounded-full bg-emerald-700 px-4 py-2 text-sm font-semibold text-black shadow-lg hover:brightness-95 wa-open"
     href="#" data-text="Ia ora na ! J'ai un projet de site vitrine (Starter 30 000 XPF)." title="Discuter sur WhatsApp">📱 WhatsApp</a>
-
-  <script src="{{ asset('js/app.js') }}" defer></script>
 
 </body>
 
